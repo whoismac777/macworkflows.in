@@ -258,6 +258,10 @@ section.hero{border-top:none}
 .c-card p{font-family:var(--font-d);font-size:10px;color:var(--fg3);margin-top:4px}
 .c-card.icon-only{display:grid;place-items:center;height:88px;padding:0;background:var(--s2);border-radius:12px;color:var(--fg1)}
 .c-card.icon-only:hover{background:var(--fg1);color:var(--s0);border-color:var(--fg1);transform:translateY(-1px)}
+.n8n-note{border:1px dashed var(--h);border-radius:12px;padding:14px;background:var(--s1)}
+.n8n-note h4{font-family:var(--font-d);font-size:11px;font-weight:700;display:flex;align-items:center;gap:6px;color:var(--fg1)}
+.n8n-note code{font-family:var(--font-d);font-size:11px;background:var(--s2);border:1px solid var(--h);padding:2px 6px;border-radius:6px;word-break:break-all;color:var(--fg2)}
+.n8n-note p{font-size:11px;color:var(--fg3);margin-top:6px;line-height:1.5}
 @media(max-width:980px){.contact-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
 /* Marquee */
 .marquee{border-top:1px solid var(--h);border-bottom:1px solid var(--h);background:rgba(255,255,255,.01);overflow:hidden;padding:10px 0;white-space:nowrap}
@@ -380,6 +384,7 @@ section.hero{border-top:none}
       <div class="hero-note">No templates. Built around your exact process. 14-day support included.</div>
     </div>
     <div class="wfp-float">
+      <!-- EDIT NODES HERE: change <b>Trigger/Enrich/AI/Execute</b> and <small> text — animation will auto-cycle Enrich ↔ AI -->
       <div class="wfp-panel" id="wfpPanel" aria-hidden="true">
         <div class="wfp-top"><div class="dots"><i></i><i></i><i></i></div><span class="wfp-label">n8n workflow — production</span></div>
         <div class="workflow">
@@ -523,6 +528,7 @@ section.hero{border-top:none}
           <div class="alert error2" id="errorMsg" role="alert">Something went wrong. Please try again or email directly.</div>
           <p class="form-note">By submitting, you agree to be contacted about automation services. We never share your data.</p>
         </form>
+        <div class="n8n-note" style="margin-top:16px"><h4><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Backend active — emails to marundeeswar7@gmail.com</h4><p>Form posts to <code>/api/lead</code> (Vercel serverless). Emails you instantly via Resend/SMTP/FormSubmit.<br>To also send to n8n, set <code>const WEBHOOK_URL = "https://YOUR_N8N/webhook/..."</code> or add `N8N_WEBHOOK_URL` env to forward.</p><p>Payload: <code>{ name, company, email, message, budget, pageUrl, timestamp }</code></p></div>
       </div>
       <div class="contact-side">
         <div class="contact-hero"><h2>Let's map<br>your first win.</h2><p>15-minute call. We'll identify one process to automate this week — free, no obligation.</p>
@@ -602,7 +608,7 @@ if(wfpPanel2){
   wfpPanel2.addEventListener('mouseleave',()=> startWfp2());
   wfpPanel2.addEventListener('click',()=>{ clearInterval(wfpTimer2); setWfActive((wfpSlide2+1)%2); startWfp2(); });
 }
-const WEBHOOK_URL="/api/lead";
+const WEBHOOK_URL="/api/lead"; // backend sends email to marundeeswar7@gmail.com — change to your n8n webhook if needed: "https://YOUR_N8N/webhook/macworkflows-leads"
 const form=document.getElementById('contactForm'),submitBtn=document.getElementById('submitBtn'),successMsg=document.getElementById('successMsg'),errorMsg=document.getElementById('errorMsg');
 function setError(id,show){const inp=document.getElementById(id),err=document.getElementById('err-'+id);if(show){inp.classList.add('invalid');err.classList.add('show')}else{inp.classList.remove('invalid');err.classList.remove('show')}}
 function validate(){let ok=true;const n=form.name.value.trim(),c=form.company.value.trim(),e=form.email.value.trim(),m=form.message.value.trim(),ev=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);if(!n){setError('name',true);ok=false}else setError('name',false);if(!c){setError('company',true);ok=false}else setError('company',false);if(!e||!ev){setError('email',true);ok=false}else setError('email',false);if(!m){setError('message',true);ok=false}else setError('message',false);return ok}
@@ -618,7 +624,7 @@ form.addEventListener('submit',async e=>{
       const r=await fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
       const data=await r.json().catch(()=>({}));
       if(!r.ok) throw new Error(data.error || 'Webhook error '+r.status);
-      // Fallback
+      // Fallback: if backend has no email provider, also trigger client-side FormSubmit (works from browser, sends to your Gmail)
       if(data.via==='log'){
         try{
           await fetch('https://formsubmit.co/ajax/marundeeswar7@gmail.com',{
@@ -645,12 +651,13 @@ if(lmForm){
       const r=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:'Checklist Subscriber',company:'—',email,message:'Request: Workflow Audit Checklist PDF (lead magnet)',budget:'—',pageUrl:location.href})});
       const d=await r.json().catch(()=>({}));
       if(!r.ok) throw new Error(d.error||'Failed');
-      // Fallback
+      // fallback to FormSubmit client-side if via log
       if(d.via==='log'){
         try{ await fetch('https://formsubmit.co/ajax/marundeeswar7@gmail.com',{method:'POST',headers:{'Content-Type':'application/json', Accept:'application/json'}, body:JSON.stringify({name:'Checklist Subscriber',email,message:'Workflow Audit Checklist request',_subject:'Checklist lead — '+email,_template:'table',_captcha:'false'})}); }catch(e){}
       }
       msg.textContent='✓ Sent! Check your email — checklist PDF + loom link coming. Also in spam?'; msg.style.color='#9FBA8E'; msg.style.display='block'; lmForm.reset();
-      const a=document.createElement('a'); a.href='data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFI+PgplbmRvYmoK'; a.download='Mac-Work-Flows-Audit-Checklist.pdf';
+      // optional: trigger download — create a dummy PDF via data url
+      const a=document.createElement('a'); a.href='data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFI+PgplbmRvYmoK'; a.download='Mac-Work-Flows-Audit-Checklist.pdf'; /* placeholder */ // a.click();
     }catch(err){ msg.textContent='Could not send — email marundeeswar7@gmail.com'; msg.style.color='#C8826F'; msg.style.display='block'; }
     finally{ btn.disabled=false; btn.textContent='Send me the checklist →'; }
   });
