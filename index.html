@@ -362,25 +362,7 @@ section.hero{border-top:none}
 .cards .card.in,.steps .step.in{opacity:1;transform:none;transition:opacity .55s var(--ease),transform .55s var(--ease)}
 @media(prefers-reduced-motion:reduce){.wfp-panel .pulse-dot{display:none}}
 
-/* ── Stack / Integrations slide (static adapt of integration-card) ── */
-.stack-visual{position:relative;border:1px solid var(--h);border-radius:14px;background:var(--s1);background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;padding:18px;overflow:hidden;min-height:340px;display:grid;place-items:center}
-.stack-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.stack-svg path.flow{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1}
-.stack-svg path.beam{fill:none;stroke:var(--acc);stroke-width:2;stroke-dasharray:36 160;animation:beamMove 3.8s linear infinite;opacity:.8}
-@keyframes beamMove{to{stroke-dashoffset:-196}}
-.stack-center{position:relative;z-index:2;width:64px;height:64px;border-radius:16px;background:var(--fg1);color:var(--s0);display:grid;place-items:center;font-weight:800;font-size:24px;box-shadow:0 12px 32px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.04);animation:centerPulse 3s ease-in-out infinite}
-@keyframes centerPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.tool-node{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;background:var(--s2);border:1px solid var(--h);border-radius:999px;padding:8px 12px;font-family:var(--font-d);font-size:11px;font-weight:600;color:var(--fg1);box-shadow:0 8px 20px rgba(0,0,0,.35);animation:nodeFloat 5s ease-in-out infinite alternate;white-space:nowrap}
-.tool-node i{width:26px;height:26px;border-radius:50%;background:var(--fg1);color:var(--s0);display:grid;place-items:center;flex-shrink:0;font-style:normal}.tool-node i svg{width:14px;height:14px}.stack-center svg{width:30px;height:30px}
-.tool-node small{color:var(--fg3);font-weight:500}
-@keyframes nodeFloat{from{transform:translateY(-4px)}to{transform:translateY(4px)}}
-.stack-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
-.tool-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.tool-pill{font-family:var(--font-d);font-size:11px;font-weight:600;border:1px solid var(--h);background:var(--s1);padding:7px 11px;border-radius:999px;color:var(--fg2);transition:border-color .2s,transform .2s}
-.tool-pill:hover{border-color:rgba(255,255,255,.2);color:var(--fg1);transform:translateY(-1px)}
-.tool-pill.hot{border-color:rgba(76,125,240,.4);color:var(--fg1);background:rgba(76,125,240,.08)}
-@media(max-width:980px){.stack-grid{grid-template-columns:1fr}.tool-node{position:static;animation:none}.stack-nodes-mobile{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}.stack-visual{min-height:unset}.stack-svg{display:none}.stack-center{margin:0 auto}}
-@media(min-width:981px){.stack-nodes-mobile{display:contents}}
+
 
 
 </style>
@@ -498,42 +480,40 @@ section.hero{border-top:none}
 
 
 <section class="section" id="stack">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Stack</div><h2>One hub.<br>All your tools connected.</h2><p>n8n at the center — Claude, Manus, Slack and 40+ tools around it. No switching tabs.</p></div>
-    <div class="stack-grid">
-      <div class="stack-visual" aria-hidden="false">
-        <svg class="stack-svg" viewBox="0 0 520 340" preserveAspectRatio="none">
-          <path class="flow" d="M260 170 L90 70"/><path class="beam" d="M260 170 L90 70"/>
-          <path class="flow" d="M260 170 L430 70"/><path class="beam" d="M260 170 L430 70" style="animation-delay:.6s"/>
-          <path class="flow" d="M260 170 L70 170"/><path class="beam" d="M260 170 L70 170" style="animation-delay:1.1s"/>
-          <path class="flow" d="M260 170 L450 170"/><path class="beam" d="M260 170 L450 170" style="animation-delay:1.6s"/>
-          <path class="flow" d="M260 170 L120 280"/><path class="beam" d="M260 170 L120 280" style="animation-delay:2s"/>
-          <path class="flow" d="M260 170 L400 280"/><path class="beam" d="M260 170 L400 280" style="animation-delay:2.5s"/>
+  <div class="container" style="max-width:720px">
+    <div class="section-head"><div class="kicker">Stack</div><h2>One hub.<br>All your tools connected.</h2><p>n8n at the center — Claude, Manus, Slack and 40+ tools around it.</p></div>
+    <div class="int-card">
+      <div class="int-visual">
+        <svg class="int-lines" viewBox="0 0 520 380" preserveAspectRatio="xMidYMid meet">
+          <path class="flow" d="M140 100 H220 Q230 100 230 110 V130"/>
+          <path class="beam" d="M140 100 H220 Q230 100 230 110 V130"/>
+          <path class="flow" d="M380 80 V90 Q380 100 370 100 H300 Q290 100 290 110 V135"/>
+          <path class="beam" d="M380 80 V90 Q380 100 370 100 H300 Q290 100 290 110 V135" style="animation-delay:.7s"/>
+          <path class="flow" d="M130 200 H215"/>
+          <path class="beam" d="M130 200 H215" style="animation-delay:1.2s"/>
+          <path class="flow" d="M305 200 H390"/>
+          <path class="beam" d="M305 200 H390" style="animation-delay:1.6s"/>
+          <path class="flow" d="M260 245 V290 Q260 300 270 300 H340"/>
+          <path class="beam" d="M260 245 V290 Q260 300 270 300 H340" style="animation-delay:2.1s"/>
+          <path class="flow" d="M230 245 V270 Q230 280 220 280 H200 Q190 280 190 290 V300"/>
+          <path class="beam" d="M230 245 V270 Q230 280 220 280 H200 Q190 280 190 290 V300" style="animation-delay:2.6s"/>
         </svg>
-        <div class="stack-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7 7.5 10.5 16M17 7.5 13.5 16M7.2 6h9.6"/></svg></div>
-        <div class="stack-nodes-mobile" style="position:absolute;inset:0;pointer-events:none">
-          <div class="tool-node" style="left:4%;top:12%;animation-delay:0s"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.5 7.5 10.5 16M17.5 7.5 13.5 16M7 6h10"/></svg></i> n8n <small>hub</small></div>
-          <div class="tool-node" style="right:4%;top:10%;animation-delay:.8s"><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg></i> Claude <small>AI</small></div>
-          <div class="tool-node" style="left:2%;top:44%;animation-delay:1.4s"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="5" y="5" width="14" height="14" rx="3"/><circle cx="9.5" cy="10.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="10.5" r="1.2" fill="currentColor" stroke="none"/><path d="M9 15c1 1 5 1 6 0"/></svg></i> Manus <small>AI</small></div>
-          <div class="tool-node" style="right:2%;top:44%;animation-delay:.4s"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H6a2 2 0 0 0-2 2v3h3V5h2V3zM15 3h3v2h-2v3h-3V5h2V3zM3 9v3h8V9H3zM15 9h6v3h-8V9h2zM9 15H3v3a2 2 0 0 0 2 2h3v-2H6v-3h3v-3zM15 15v-3h3v3h2v-3h-2V9h-3v6zM9 18v3h3v-3H9zM15 18v3h-3v-3h3z"/></svg></i> Slack <small>alerts</small></div>
-          <div class="tool-node" style="left:8%;bottom:8%;animation-delay:2s"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11M15 9v11"/></svg></i> Sheets <small>data</small></div>
-          <div class="tool-node" style="right:8%;bottom:8%;animation-delay:1.1s"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 12a9 9 0 1 1-16.5 5L3 21l4.2-1.4A9 9 0 0 1 21 12z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-6-4-7-7-.5-1.5 0-2.5 1.5-3l1 2L9 9.5z" fill="currentColor" stroke="none"/></svg></i> WhatsApp <small>notify</small></div>
-        </div>
+        <div class="int-node" style="left:18%;top:14%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3a2 2 0 0 0-2 2 2 2 0 0 0-.5 1.3L9 7.5V9H7.5L6.3 7.5A2 2 0 0 0 5 7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h1v1.5l1.5 1.5H9V16a2 2 0 0 0 3.4 1.4L14 16v-1.5h1.5l1.5-1.5V11h-1.5L14 9.5V8l.5-.7A2 2 0 0 0 15 6a2 2 0 0 0-2-3z"/></svg></div>
+        <div class="int-node" style="right:18%;top:10%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4zM19 16l1 2.5L22.5 19 20 20l-1 2.5L18 20l-2.5-1L18 18z"/></svg></div>
+        <div class="int-node" style="left:14%;top:44%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        <div class="int-center"><span>M</span></div>
+        <div class="int-node" style="right:14%;top:44%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" stroke-dasharray="3 3"/><circle cx="12" cy="5" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+        <div class="int-node" style="left:26%;bottom:8%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 20 14 4h3L7 20H4zM13 20l8-12h2l-8 12h-2z"/></svg></div>
+        <div class="int-node" style="right:22%;bottom:10%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5zm0 8c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5z" opacity=".9"/></svg></div>
       </div>
-      <div>
-        <h3 style="font-size:18px;font-weight:800;letter-spacing:-.02em">Seamless Integrations</h3>
-        <p style="font-size:14px;color:var(--fg2);margin-top:8px;line-height:1.6">Connect your favorite tools and keep workflows unified without switching platforms. If it has an API, we automate it.</p>
-        <div class="tool-pills">
+      <div class="int-body">
+        <h3>Seamless Integrations</h3>
+        <p>Connect n8n, Claude, Manus, Slack, Notion, Sheets, WhatsApp and 40+ tools — keep your workflows unified without switching platforms.</p>
+        <div class="tool-pills" style="margin-top:14px">
           <span class="tool-pill hot">n8n</span><span class="tool-pill hot">Claude</span><span class="tool-pill hot">Manus</span><span class="tool-pill hot">Slack</span>
-          <span class="tool-pill">Notion</span><span class="tool-pill">Google Sheets</span><span class="tool-pill">WhatsApp</span><span class="tool-pill">HubSpot</span>
-          <span class="tool-pill">Gmail</span><span class="tool-pill">Telegram</span><span class="tool-pill">Stripe</span><span class="tool-pill">Shopify</span>
-          <span class="tool-pill">Airtable</span><span class="tool-pill">OpenAI</span>
+          <span class="tool-pill">Notion</span><span class="tool-pill">Sheets</span><span class="tool-pill">WhatsApp</span><span class="tool-pill">HubSpot</span>
         </div>
-        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="#contact" class="btn-primary">Connect my stack →</a>
-          <a href="#projects" class="btn-ghost">See use cases</a>
-        </div>
-        <p style="font-family:var(--font-d);font-size:11px;color:var(--fg3);margin-top:12px">40+ integrations • API • Webhooks • Custom connectors</p>
+        <a href="#contact" class="btn-primary" style="margin-top:18px">Connect my stack →</a>
       </div>
     </div>
   </div>
