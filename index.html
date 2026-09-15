@@ -365,6 +365,24 @@ section.hero{border-top:none}
 
 
 
+/* ── Stack card — 21st.dev integration-card style ── */
+.int-card{max-width:560px;margin:0 auto;background:#131315;border:1px solid rgba(255,255,255,.09);border-radius:20px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.int-visual{position:relative;height:360px;background:#101012;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.4px);background-size:26px 26px;border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden}
+.int-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,16,18,.6),transparent 25%,transparent 75%,rgba(16,16,18,.85));pointer-events:none}
+.int-lines{position:absolute;inset:0;width:100%;height:100%}
+.int-lines .flow{fill:none;stroke:rgba(255,255,255,.14);stroke-width:1.2}
+.int-lines .beam{fill:none;stroke:#fff;stroke-width:1.6;stroke-dasharray:30 140;animation:beamMove 3.6s linear infinite;opacity:.85}
+@keyframes beamMove{to{stroke-dashoffset:-170}}
+.int-node{position:absolute;width:48px;height:48px;border-radius:12px;background:#1c1c1f;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:2}
+.int-node svg{width:22px;height:22px}
+.int-center{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:16px;background:#0a0a0b;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;z-index:3;box-shadow:0 0 0 6px rgba(255,255,255,.03),0 16px 40px rgba(0,0,0,.6)}
+.int-center span{width:36px;height:36px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;font-size:14px}
+.int-body{padding:26px 28px 28px;background:#131315}
+.int-body h3{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.int-body p{font-size:14px;color:#a1a1aa;margin-top:8px;line-height:1.6}
+@media(max-width:640px){.int-visual{height:300px}.int-node{width:42px;height:42px}.int-center{width:56px;height:56px}}
+@media(prefers-reduced-motion:reduce){.int-lines .beam{animation:none}}
+
 </style>
 </head>
 <body>
