@@ -374,7 +374,7 @@ section.hero{border-top:none}
 .int-lines .beam{fill:none;stroke:#fff;stroke-width:1.6;stroke-dasharray:30 140;animation:beamMove 3.6s linear infinite;opacity:.85}
 @keyframes beamMove{to{stroke-dashoffset:-170}}
 .int-node{position:absolute;width:48px;height:48px;border-radius:12px;background:#1c1c1f;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:2}
-.int-node svg{width:22px;height:22px}
+.int-node svg{width:22px;height:22px}.int-node .ord{position:absolute;top:-8px;right:-8px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--acc);color:#fff;font-family:var(--font-d);font-size:9px;font-weight:700;display:grid;place-items:center;border:2px solid #101012}.int-node{overflow:visible}
 .int-center{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:16px;background:#0a0a0b;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;z-index:3;box-shadow:0 0 0 6px rgba(255,255,255,.03),0 16px 40px rgba(0,0,0,.6)}
 .int-center span{width:36px;height:36px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;font-size:14px}
 .int-body{padding:26px 28px 28px;background:#131315}
@@ -516,21 +516,21 @@ section.hero{border-top:none}
           <path class="flow" d="M230 245 V270 Q230 280 220 280 H200 Q190 280 190 290 V300"/>
           <path class="beam" d="M230 245 V270 Q230 280 220 280 H200 Q190 280 190 290 V300" style="animation-delay:2.6s"/>
         </svg>
-        <div class="int-node" style="left:18%;top:14%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3a2 2 0 0 0-2 2 2 2 0 0 0-.5 1.3L9 7.5V9H7.5L6.3 7.5A2 2 0 0 0 5 7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h1v1.5l1.5 1.5H9V16a2 2 0 0 0 3.4 1.4L14 16v-1.5h1.5l1.5-1.5V11h-1.5L14 9.5V8l.5-.7A2 2 0 0 0 15 6a2 2 0 0 0-2-3z"/></svg></div>
-        <div class="int-node" style="right:18%;top:10%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4zM19 16l1 2.5L22.5 19 20 20l-1 2.5L18 20l-2.5-1L18 18z"/></svg></div>
-        <div class="int-node" style="left:14%;top:44%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        <div class="int-node" title="01 Lead — WhatsApp" style="left:18%;top:14%"><span class="ord">01</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3a2 2 0 0 0-2 2 2 2 0 0 0-.5 1.3L9 7.5V9H7.5L6.3 7.5A2 2 0 0 0 5 7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h1v1.5l1.5 1.5H9V16a2 2 0 0 0 3.4 1.4L14 16v-1.5h1.5l1.5-1.5V11h-1.5L14 9.5V8l.5-.7A2 2 0 0 0 15 6a2 2 0 0 0-2-3z"/></svg></div>
+        <div class="int-node" title="02 CRM — Slack/HubSpot" style="right:18%;top:10%"><span class="ord">02</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4zM19 16l1 2.5L22.5 19 20 20l-1 2.5L18 20l-2.5-1L18 18z"/></svg></div>
+        <div class="int-node" title="03 Marketing — Gmail/Telegram" style="left:14%;top:44%"><span class="ord">03</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
         <div class="int-center"><span>M</span></div>
-        <div class="int-node" style="right:14%;top:44%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" stroke-dasharray="3 3"/><circle cx="12" cy="5" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
-        <div class="int-node" style="left:26%;bottom:8%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 20 14 4h3L7 20H4zM13 20l8-12h2l-8 12h-2z"/></svg></div>
-        <div class="int-node" style="right:22%;bottom:10%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5zm0 8c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5z" opacity=".9"/></svg></div>
+        <div class="int-node" title="04 AI — Claude/Manus" style="right:14%;top:44%"><span class="ord">04</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" stroke-dasharray="3 3"/><circle cx="12" cy="5" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+        <div class="int-node" title="05 API — n8n" style="left:26%;bottom:8%"><span class="ord">05</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 20 14 4h3L7 20H4zM13 20l8-12h2l-8 12h-2z"/></svg></div>
+        <div class="int-node" title="06 Custom — Sheets/Notion" style="right:22%;bottom:10%"><span class="ord">06</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5zm0 8c2.5-4.5 6-6 10-6 5 0 7 3.5 10 3.5-2.5 4.5-6 6-10 6-5 0-7-3.5-10-3.5z" opacity=".9"/></svg></div>
       </div>
       <div class="int-body">
         <h3>Seamless Integrations</h3>
         <p>Connect n8n, Claude, Manus, Slack, Notion, Sheets, WhatsApp and 40+ tools — keep your workflows unified without switching platforms.</p>
         <div class="tool-pills" style="margin-top:14px">
-          <span class="tool-pill hot">n8n</span><span class="tool-pill hot">Claude</span><span class="tool-pill hot">Manus</span><span class="tool-pill hot">Slack</span>
-          <span class="tool-pill">Notion</span><span class="tool-pill">Sheets</span><span class="tool-pill">WhatsApp</span><span class="tool-pill">HubSpot</span>
+          <span class="tool-pill hot">01 WhatsApp</span><span class="tool-pill hot">02 HubSpot</span><span class="tool-pill hot">02 Slack</span><span class="tool-pill">02 Notion</span><span class="tool-pill">03 Gmail</span><span class="tool-pill">03 Telegram</span><span class="tool-pill hot">04 Claude</span><span class="tool-pill hot">04 Manus</span><span class="tool-pill">05 n8n</span><span class="tool-pill">05 Stripe</span><span class="tool-pill">05 Shopify</span><span class="tool-pill">06 Sheets</span>
         </div>
+        <p style="font-family:var(--font-d);font-size:10px;color:var(--fg3);margin-top:8px">01 Lead • 02 CRM • 03 Marketing • 04 AI • 05 API • 06 Custom — same order as Services</p>
         <a href="#contact" class="btn-primary" style="margin-top:18px">Connect my stack →</a>
       </div>
     </div>
