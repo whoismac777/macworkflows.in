@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.macworkflows.in/sitemap.xml
+Sitemap: https://macworkflows.in/sitemap.xml
