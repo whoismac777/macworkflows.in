@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mac Work Flows — Custom n8n Automation for Modern Businesses</title>
 <meta name="description" content="Mac Work Flows builds custom n8n workflows that connect your tools, automate everyday operations, and help your business move faster. 30+ workflows since 2024, 99.9% uptime.">
+<link rel="canonical" href="https://www.macworkflows.in/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.macworkflows.in/">
 <meta property="og:title" content="Mac Work Flows — Custom n8n Automation for Modern Businesses">
@@ -328,62 +329,6 @@ section.hero{border-top:none}
   .stats-inner{gap:0}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.kicker,.section-head h2,.section-head p{opacity:1;transform:none}}
-
-/* ── New: Testimonials / Pricing / FAQ + animations ── */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.testi{background:var(--s1);border:1px solid var(--h);border-radius:14px;padding:22px;transition:transform .35s var(--ease),border-color .25s}
-.testi:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.13)}
-.testi p{font-family:var(--font-s);font-style:italic;font-size:14px;color:var(--fg2);line-height:1.6}
-.testi b{display:block;margin-top:12px;font-size:13px;color:var(--fg1)}
-.testi small{font-family:var(--font-d);font-size:11px;color:var(--fg3)}
-.testi .stars{color:var(--acc);letter-spacing:.1em;font-size:12px;margin-bottom:10px}
-@media(max-width:980px){.testi-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.testi-grid{grid-template-columns:1fr}}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.price-card{background:var(--s1);border:1px solid var(--h);border-radius:14px;padding:26px;position:relative;transition:transform .35s var(--ease),border-color .25s}
-.price-card.featured{background:var(--s2);border-color:rgba(76,125,240,.35);box-shadow:0 20px 50px -20px rgba(76,125,240,.25)}
-.price-card:hover{transform:translateY(-4px)}
-.price-card h3{font-size:15px;font-weight:800}
-.price-card .amt{font-family:var(--font-d);font-size:28px;font-weight:800;margin:10px 0 4px}
-.price-card ul{list-style:none;margin:14px 0;display:grid;gap:8px;font-size:13px;color:var(--fg2)}
-.price-card ul li::before{content:'✓ ';color:var(--ok);font-weight:700}
-@media(max-width:980px){.pricing-grid{grid-template-columns:1fr}}
-.faq-wrap{max-width:760px;margin:0 auto;display:grid;gap:10px}
-.faq{background:var(--s1);border:1px solid var(--h);border-radius:12px;overflow:hidden}
-.faq button{width:100%;text-align:left;background:none;border:none;color:var(--fg1);font-size:14px;font-weight:700;padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.faq .ans{max-height:0;overflow:hidden;transition:max-height .35s var(--ease);font-size:13px;color:var(--fg2);padding:0 18px}
-.faq.open .ans{max-height:220px;padding:0 18px 16px}
-.faq .plus{font-family:var(--font-d);color:var(--fg3);transition:transform .3s}
-.faq.open .plus{transform:rotate(45deg)}
-.stat-v .num{display:inline-block;min-width:2ch}
-.wfp-panel .pulse-dot{position:absolute;left:22px;width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc);z-index:2;animation:wfpPulse 3.6s linear infinite;opacity:0}
-@keyframes wfpPulse{0%{top:36px;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:calc(100% - 60px);opacity:0}}
-.cards .card,.steps .step{opacity:0;transform:translateY(14px)}
-.cards .card.in,.steps .step.in{opacity:1;transform:none;transition:opacity .55s var(--ease),transform .55s var(--ease)}
-@media(prefers-reduced-motion:reduce){.wfp-panel .pulse-dot{display:none}}
-
-
-
-
-/* ── Stack card — 21st.dev integration-card style ── */
-.int-card{max-width:560px;margin:0 auto;background:#131315;border:1px solid rgba(255,255,255,.09);border-radius:20px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
-.int-visual{position:relative;height:360px;background:#101012;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.4px);background-size:26px 26px;border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden}
-.int-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,16,18,.6),transparent 25%,transparent 75%,rgba(16,16,18,.85));pointer-events:none}
-.int-lines{position:absolute;inset:0;width:100%;height:100%}
-.int-lines .flow{fill:none;stroke:rgba(255,255,255,.14);stroke-width:1.2}
-.int-lines .beam{fill:none;stroke:#fff;stroke-width:1.6;stroke-dasharray:30 140;animation:beamMove 3.6s linear infinite;opacity:.85}
-@keyframes beamMove{to{stroke-dashoffset:-170}}
-.int-node{position:absolute;width:48px;height:48px;border-radius:12px;background:#1c1c1f;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:2}
-.int-node svg{width:22px;height:22px}.int-node .ord{position:absolute;top:-8px;right:-8px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--acc);color:#fff;font-family:var(--font-d);font-size:9px;font-weight:700;display:grid;place-items:center;border:2px solid #101012}.int-node{overflow:visible}.int-node .lbl{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-d);font-style:normal;font-size:9px;font-weight:700;letter-spacing:.04em;color:var(--fg1);background:#0a0a0b;border:1px solid rgba(255,255,255,.12);padding:2px 7px;border-radius:999px;white-space:nowrap}.int-visual{padding-bottom:8px}.int-node .lbl small{display:block;font-size:8px;font-weight:500;color:var(--fg3);letter-spacing:.02em}.int-node .lbl{line-height:1.2;padding:3px 8px 4px;text-align:center}
-.int-center{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:16px;background:#0a0a0b;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;z-index:3;box-shadow:0 0 0 6px rgba(255,255,255,.03),0 16px 40px rgba(0,0,0,.6)}
-.int-center span{width:36px;height:36px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;font-size:14px}
-.int-body{padding:26px 28px 28px;background:#131315}
-.int-body h3{font-size:22px;font-weight:700;letter-spacing:-.02em}
-.int-body p{font-size:14px;color:#a1a1aa;margin-top:8px;line-height:1.6}
-@media(max-width:640px){.int-visual{height:300px}.int-node{width:42px;height:42px}.int-center{width:56px;height:56px}}
-@media(prefers-reduced-motion:reduce){.int-lines .beam{animation:none}}
-
-.linkedin-follow{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-family:var(--font-d);font-size:11px;letter-spacing:.06em;color:var(--fg2);border:1px solid var(--h);padding:8px 14px;border-radius:999px;transition:border-color .2s,background .2s,transform .2s}.linkedin-follow:hover{border-color:rgba(0,119,181,.5);background:rgba(0,119,181,.1);color:var(--fg1);transform:translateY(-1px)}.linkedin-follow svg{color:#0077B5}
 </style>
 </head>
 <body>
@@ -405,11 +350,7 @@ section.hero{border-top:none}
       <a href="#services">Services</a>
       <a href="#how">How It Works</a>
       <a href="#projects">Projects</a>
-      <a href="#stack">Stack</a>
-      <a href="#results">Results</a>
-      <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="btn-primary nav-cta-desktop">Book a Free Call <span aria-hidden="true">→</span></a>
@@ -417,7 +358,7 @@ section.hero{border-top:none}
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile">
-  <a href="#home">Home</a><a href="#services">Services</a><a href="#how">How It Works</a><a href="#projects">Projects</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  <a href="#home">Home</a><a href="#services">Services</a><a href="#how">How It Works</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
   <a href="#contact" class="btn-primary" style="justify-content:center;margin-top:8px">Book a Free Call →</a>
 </div>
 
@@ -440,7 +381,6 @@ section.hero{border-top:none}
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Book a Free Automation Call <span>→</span></a>
         <a href="#services" class="btn-ghost">Explore Services</a>
-        <a href="https://www.linkedin.com/in/marundeeswargp" target="_blank" rel="noopener" class="linkedin-follow" style="margin-top:0">Follow the builds on LinkedIn <span>→</span></a>
       </div>
       <div class="hero-note">No templates. Built around your exact process. 14-day support included.</div>
     </div>
@@ -449,7 +389,7 @@ section.hero{border-top:none}
       <div class="wfp-panel" id="wfpPanel" aria-hidden="true">
         <div class="wfp-top"><div class="dots"><i></i><i></i><i></i></div><span class="wfp-label">n8n workflow — production</span></div>
         <div class="workflow">
-          <div class="v-line"></div><div class="pulse-dot" aria-hidden="true"></div>
+          <div class="v-line"></div>
           <div class="node-row"><div class="node" data-node="0"><div class="node-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><b>Trigger</b><small>Form / Webhook / Schedule</small></div></div><div class="connector"></div><div style="font-family:var(--font-d);font-size:10px;color:var(--fg3)">instant</div></div>
           <div class="node-row"><div class="node is-active" data-node="1"><div class="node-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><b>Enrich & Route</b><small>CRM • Sheets • Notion</small></div></div><div class="connector"></div><div style="font-family:var(--font-d);font-size:10px;color:var(--fg3)">→</div></div>
           <div class="node-row"><div class="node" data-node="2"><div class="node-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div><div><b>AI & Logic</b><small>Classify • Extract • Decide</small></div></div><div class="connector"></div><div style="font-family:var(--font-d);font-size:10px;color:var(--fg3)">action</div></div>
@@ -464,11 +404,11 @@ section.hero{border-top:none}
 
 <div class="stats-bar">
   <div class="container stats-inner">
-    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="stat-v"><span class="num" data-count="30" data-suffix="+">30+</span> workflows</div><div class="stat-k">Custom n8n Workflows</div></div></div>
+    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="stat-v"><span class="num">30+</span> workflows</div><div class="stat-k">Custom n8n Workflows</div></div></div>
     <div class="stat-div"></div>
-    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div><div><div class="stat-v"><span class="num" data-count="40" data-suffix="+">40+</span> tools</div><div class="stat-k">API & App Integrations</div></div></div>
+    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div><div><div class="stat-v"><span class="num">40+</span> tools</div><div class="stat-k">API & App Integrations</div></div></div>
     <div class="stat-div"></div>
-    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="stat-v"><span class="num" data-count="99.9" data-decimals="1" data-suffix="%">99.9%</span> uptime</div><div class="stat-k">Business Process Automation</div></div></div>
+    <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="stat-v"><span class="num">99.9%</span> uptime</div><div class="stat-k">Business Process Automation</div></div></div>
     <div class="stat-div"></div>
     <div class="stat-item"><div class="stat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="stat-v">Ongoing</div><div class="stat-k">Support & Optimization</div></div></div>
   </div>
@@ -498,41 +438,6 @@ section.hero{border-top:none}
   </div>
 </section>
 
-
-<section class="section" id="stack">
-  <div class="container" style="max-width:720px">
-    <div class="section-head"><div class="kicker">Stack</div><h2>One hub.<br>All your tools connected.</h2><p>Gmail on top, n8n at the center — Claude, Manus, Slack, GitHub and 40+ tools around it.</p></div>
-    <div class="int-card">
-      <div class="int-visual">
-        <svg class="int-lines" viewBox="0 0 520 360" preserveAspectRatio="none">
-          <path class="flow" d="M94 74 V100 Q94 110 104 110 H218 Q228 110 228 120 V134"/><path class="beam" d="M94 74 V100 Q94 110 104 110 H218 Q228 110 228 120 V134"/>
-          <path class="flow" d="M426 60 V90 Q426 100 416 100 H302 Q292 100 292 110 V134"/><path class="beam" d="M426 60 V90 Q426 100 416 100 H302 Q292 100 292 110 V134" style="animation-delay:.7s"/>
-          <path class="flow" d="M97 158 H228"/><path class="beam" d="M97 158 H228" style="animation-delay:1.2s"/>
-          <path class="flow" d="M423 158 H292"/><path class="beam" d="M423 158 H292" style="animation-delay:1.6s"/>
-          <path class="flow" d="M150 283 V250 Q150 240 160 240 H230 Q240 240 240 230 V198"/><path class="beam" d="M150 283 V250 Q150 240 160 240 H230 Q240 240 240 230 V198" style="animation-delay:2.1s"/>
-          <path class="flow" d="M390 276 V240 Q390 230 380 230 H302 Q292 230 292 220 V198"/><path class="beam" d="M390 276 V240 Q390 230 380 230 H302 Q292 230 292 220 V198" style="animation-delay:2.6s"/>
-        <path class="flow" d="M260 198 V292"/><path class="beam" d="M260 198 V292" style="animation-delay:3s"/><path class="flow" d="M260 75 V134"/><path class="beam" d="M260 75 V134" style="animation-delay:.3s"/></svg>
-        <div class="int-node" title="01 Lead — WhatsApp" style="left:18%;top:14%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.4-1.9 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.1-4.7-3.8-4.9-4-.1-.2-.9-1.2-.9-2.3s.6-1.7.8-1.9c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.4-.6.8-.8 1-.1.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.6 1.6 2.9 1.7.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3 0 .2 0 .7-.2 1.1z"/></svg><em class="lbl">WhatsApp<small>instant notify</small></em></div>
-        <div class="int-node" title="02 CRM — Slack/HubSpot" style="right:18%;top:10%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 11a2.5 2.5 0 0 1 0 5H4a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h1.5zm1 0a2.5 2.5 0 0 1 5 0v6a2.5 2.5 0 0 1-5 0v-6zM11 5.5a2.5 2.5 0 0 1 5 0V7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V5.5zm0 1a2.5 2.5 0 0 1 0 5h6a2.5 2.5 0 0 1 0-5h-6zm7.5 2H20a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1.5a2.5 2.5 0 0 1 0-5zm-1 0a2.5 2.5 0 0 1-5 0V5.5a2.5 2.5 0 0 1 5 0V8.5zM13 18.5a2.5 2.5 0 0 1-5 0V17a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1.5zm0-1a2.5 2.5 0 0 1 0-5h-6a2.5 2.5 0 0 1 0 5h6z"/></svg><em class="lbl">Slack<small>team alerts</small></em></div><div class="int-node" title="00 Inbox — Gmail" style="left:50%;top:3%;transform:translateX(-50%)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg><em class="lbl">Gmail<small>inbox entry</small></em></div>
-        <div class="int-node" title="03 API — n8n hub" style="left:14%;top:44%"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg><em class="lbl">n8n<small>workflow hub</small></em></div>
-        <div class="int-center"><span>M</span></div>
-        <div class="int-node" title="04 AI — Claude/Manus" style="right:14%;top:44%"><svg viewBox="0 0 100 100" fill="currentColor"><path d="m19.6 66.5 19.7-11 .3-1-.3-.5h-1l-3.3-.2-11.2-.3L14 53l-9.5-.5-2.4-.5L0 49l.2-1.5 2-1.3 2.9.2 6.3.5 9.5.6 6.9.4L38 49.1h1.6l.2-.7-.5-.4-.4-.4L29 41l-10.6-7-5.6-4.1-3-2-1.5-2-.6-4.2 2.7-3 3.7.3.9.2 3.7 2.9 8 6.1L37 36l1.5 1.2.6-.4.1-.3-.7-1.1L33 25l-6-10.4-2.7-4.3-.7-2.6c-.3-1-.4-2-.4-3l3-4.2L28 0l4.2.6L33.8 2l2.6 6 4.1 9.3L47 29.9l2 3.8 1 3.4.3 1h.7v-.5l.5-7.2 1-8.7 1-11.2.3-3.2 1.6-3.8 3-2L61 2.6l2 2.9-.3 1.8-1.1 7.7L59 27.1l-1.5 8.2h.9l1-1.1 4.1-5.4 6.9-8.6 3-3.5L77 13l2.3-1.8h4.3l3.1 4.7-1.4 4.9-4.4 5.6-3.7 4.7-5.3 7.1-3.2 5.7.3.4h.7l12-2.6 6.4-1.1 7.6-1.3 3.5 1.6.4 1.6-1.4 3.4-8.2 2-9.6 2-14.3 3.3-.2.1.2.3 6.4.6 2.8.2h6.8l12.6 1 3.3 2 1.9 2.7-.3 2-5.1 2.6-6.8-1.6-16-3.8-5.4-1.3h-.8v.4l4.6 4.5 8.3 7.5L89 80.1l.5 2.4-1.3 2-1.4-.2-9.2-7-3.6-3-8-6.8h-.5v.7l1.8 2.7 9.8 14.7.5 4.5-.7 1.4-2.6 1-2.7-.6-5.8-8-6-9-4.7-8.2-.5.4-2.9 30.2-1.3 1.5-3 1.2-2.5-2-1.4-3 1.4-6.2 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2H49L43 72l-9 12.3-7.2 7.6-1.7.7-3-1.5.3-2.8L24 86l10-12.8 6-7.9 4-4.6-.1-.5h-.3L17.2 77.4l-4.7.6-2-2 .2-3 1-1 8-5.5Z"/></svg><em class="lbl">Claude<small>AI reasoning</small></em></div>
-        <div class="int-node" title="05 AI Agent — Manus" style="left:26%;bottom:8%"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.40053 8.55807C8.88268 9.62143 9.31868 10.9063 10.3744 11.4279C11.8907 12.1771 13.2065 12.9159 14.5094 14.3954C15.2896 15.2815 16.6353 15.3627 17.515 14.5768C18.3947 13.7909 18.4753 12.4354 17.695 11.5493C15.8385 9.441 13.9275 8.40615 12.2497 7.57715C11.194 7.05554 9.91838 7.49471 9.40053 8.55807Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.9079 2.31393C19.7672 2.60119 19.0736 3.76554 19.3588 4.91457C19.558 5.71734 19.7438 6.40375 19.9139 7.03212C20.2395 8.2348 20.5075 9.22481 20.7019 10.4109C20.8934 11.5795 21.9892 12.3704 23.1493 12.1775C24.3095 11.9846 25.0947 10.8809 24.9032 9.71228C24.6735 8.31044 24.3157 6.98407 23.9566 5.65277C23.7976 5.06324 23.6383 4.47275 23.4898 3.87432C23.2046 2.72528 22.0487 2.02667 20.9079 2.31393Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.0786 3.63329C32.0734 3.01888 30.7639 3.34167 30.154 4.35425C29.0225 6.23259 28.4277 8.08208 27.8752 10.308C27.59 11.457 28.2836 12.6213 29.4244 12.9086C30.5651 13.1959 31.7211 12.4973 32.0063 11.3482C32.5183 9.28501 32.9881 7.91768 33.7944 6.5792C34.4044 5.56662 34.0839 4.24769 33.0786 3.63329Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M43.9331 56.6106C48.0617 53.9722 50.9164 39.8218 50.2884 35.6081C50.2884 35.6081 49.634 33.3459 48.0372 33.3459C46.8137 33.3458 46.1377 34.3405 45.8884 34.8057C45.6728 34.7259 45.4533 34.6537 45.2792 34.5975C45.1853 34.5672 45.0537 34.5253 44.9304 34.4861L44.6964 34.4115C44.5053 34.3503 44.3255 34.2913 44.1561 34.2328L44.1566 34.1728C44.164 32.8051 44.025 30.6709 42.6083 28.4471C42.3816 28.0912 42.1677 27.7731 41.9848 27.5032L41.8701 27.3342C41.734 27.1338 41.6272 26.9765 41.5245 26.8195C41.2723 26.4345 41.2034 26.2861 41.1767 26.2177L41.1755 26.2146C41.1651 26.1881 41.1438 26.1341 41.138 25.9694C41.1309 25.7671 41.1481 25.3842 41.2793 24.7145L41.9612 21.9896L41.9637 21.9756C42.0087 21.7255 42.0491 21.5007 42.0711 21.1346C42.0914 20.7976 42.0956 20.3078 42.01 19.7398C41.8478 18.6638 41.2257 16.6243 39.0332 15.442C38.4974 15.153 37.8556 14.9801 37.2229 14.8974C36.7976 14.8417 36.229 14.8037 35.5687 14.8547C34.2216 14.9587 32.4539 15.4438 30.8803 16.8865L30.4884 17.2987C29.5737 18.4035 28.6076 19.7714 27.8747 20.9819C25.6495 19.9345 23.0302 18.732 21.2001 18.0855C19.1915 17.3759 16.9497 16.7821 14.843 16.8585C12.5099 16.9431 9.88675 17.9212 8.51344 20.6897C7.94928 21.8269 7.70856 23.1551 7.99827 24.5393C8.27511 25.8621 8.95981 26.8738 9.61373 27.5797C10.8279 28.8904 12.4542 29.7023 13.6004 30.1944C14.478 30.5712 15.3797 30.8848 16.178 31.1385C16.0937 31.2911 16.0092 31.4491 15.9278 31.6094C15.6864 32.0841 15.3976 32.7191 15.2075 33.4457C15.0179 34.1702 14.8684 35.2025 15.1387 36.367C15.4161 37.5623 15.965 38.4957 16.6189 39.2096C16.5941 39.5809 16.5848 39.9722 16.5986 40.3769C16.6906 43.0808 18.3417 44.8835 19.7939 45.9057C21.1776 46.8796 22.8071 47.4773 24.1246 47.8792C25.3968 48.2673 26.7402 48.5753 27.8317 48.8255L28.0653 48.8791C29.2286 49.1463 30.3783 49.4555 31.5285 49.7647C32.833 50.1155 34.1381 50.4664 35.4641 50.7565C35.8978 50.8514 36.3192 50.9422 36.7069 51.0249L36.8481 51.393C38.5683 55.7887 40.8651 58.5713 43.9331 56.6106ZM28.2156 38.6193C27.9801 38.5236 27.845 38.4602 27.7251 38.3997C26.6832 37.8576 25.4015 38.2663 24.8596 39.3147C24.3165 40.3653 24.723 41.6609 25.7659 42.2079C25.8514 42.2525 25.9381 42.2945 26.0253 42.3356C26.1714 42.4046 26.3749 42.4963 26.6227 42.597C27.1114 42.7955 27.8062 43.0427 28.5938 43.211C29.9917 43.5097 32.5756 43.7375 34.3274 41.715C35.1684 40.7441 35.5727 39.4684 35.7263 38.2756C35.8845 37.0467 35.8056 35.6985 35.4968 34.3864C34.8887 31.8017 33.2785 28.9733 30.272 27.6319C27.6959 26.4825 25.1502 26.2123 23.0033 26.4547C21.57 26.6166 20.2006 27.0229 19.1006 27.6421V27.5944C16.4105 26.8207 11.0571 25.2808 12.3754 22.6232C13.3748 20.6086 16.1129 20.7751 19.8267 22.0871C21.3351 22.62 23.4312 23.5696 25.4084 24.4956C26.0213 24.7827 26.6228 25.0674 27.1918 25.3369C28.0211 25.7295 29.4076 26.3762 29.4076 26.3762C30.9845 24.47 31.5968 23.42 32.1372 22.4931C32.5089 21.8557 32.8466 21.2765 33.4408 20.5172C34.2818 19.4424 35.6412 18.7782 37.0357 19.1671C38.0076 19.6912 37.7607 21.015 37.7607 21.015L37.0852 23.7141C36.4404 26.8905 37.1541 27.9417 38.3305 29.6741C38.5371 29.9784 38.7581 30.3038 38.9884 30.6653C39.9266 32.1381 39.8833 33.5542 39.8479 34.71C39.8251 35.4534 39.8057 36.0891 40.0528 36.5629C40.5618 37.5387 42.4666 38.1438 43.7154 38.5405C44.0155 38.6358 44.2777 38.7191 44.4736 38.7927L44.6074 38.8457C44.4314 39.3955 44.2715 39.9646 44.1117 40.5332C43.4013 43.0618 42.6941 45.5791 40.5854 46.3334C37.9241 47.2853 35.2627 46.3846 35.2627 46.3846C34.783 46.2434 34.2945 46.1341 33.806 46.0247C33.1971 45.8885 32.588 45.7521 31.9952 45.554C31.1691 45.2451 30.0119 44.9796 28.7543 44.691C25.7598 44.004 22.1958 43.1863 21.1752 41.3406C21.0033 41.0297 20.9035 40.6896 20.8908 40.316C20.8331 38.6187 21.4235 37.099 21.4235 37.099C21.4235 37.099 20.5079 37.1028 19.8658 36.4806C19.6264 36.2487 19.4251 35.9298 19.3233 35.4913C19.12 34.6153 19.2946 33.3456 20.3591 32.2733L20.8926 31.7374C21.1621 31.466 21.961 30.8884 23.4778 30.7171C24.9176 30.5545 26.7 30.7292 28.5474 31.5535C29.9644 32.1857 30.9442 33.6362 31.3534 35.3755C31.5534 36.2255 31.5901 37.0507 31.5034 37.724C31.4121 38.4334 31.211 38.7887 31.1188 38.8952C31.0042 39.0275 30.6006 39.2553 29.4775 39.0153C29.0047 38.9142 28.5556 38.7574 28.2156 38.6193Z" fill="white"/></svg><em class="lbl">Manus<small>AI agent</small></em></div>
-        <div class="int-node" title="06 Custom — Sheets/Notion" style="right:22%;bottom:10%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 14h16M10 9v12"/></svg><em class="lbl">Sheets<small>live data</small></em></div><div class="int-node" title="07 Dev — GitHub" style="left:50%;bottom:8%;transform:translateX(-50%)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><em class="lbl">GitHub<small>code & CI</small></em></div>
-      </div>
-      <div class="int-body">
-        <h3>Seamless Integrations</h3>
-        <p>Connect n8n, Claude, Manus, Slack, GitHub, Notion, Sheets, WhatsApp and 40+ tools — keep your workflows unified without switching platforms.</p>
-        <div class="tool-pills" style="margin-top:14px">
-          <span class="tool-pill hot">01 WhatsApp</span><span class="tool-pill hot">02 HubSpot</span><span class="tool-pill hot">02 Slack</span><span class="tool-pill">02 Notion</span><span class="tool-pill">03 Gmail</span><span class="tool-pill">03 Telegram</span><span class="tool-pill hot">04 Claude</span><span class="tool-pill hot">04 Manus</span><span class="tool-pill">05 n8n</span><span class="tool-pill">05 Stripe</span><span class="tool-pill">05 Shopify</span><span class="tool-pill">06 Sheets</span><span class="tool-pill hot">07 GitHub</span>
-        </div>
-        <p style="font-family:var(--font-d);font-size:10px;color:var(--fg3);margin-top:8px">01 Lead • 02 CRM • 03 Marketing • 04 AI • 05 API • 06 Custom — same order as Services</p>
-        <a href="#contact" class="btn-primary" style="margin-top:18px">Connect my stack →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section how" id="how">
   <div class="container">
     <div class="section-head"><div class="kicker">How it works</div><h2>From chaos to clarity<br>in four steps</h2><p>A calm, documented process. You always know what's being built and why.</p></div>
@@ -558,18 +463,6 @@ section.hero{border-top:none}
   </div>
 </section>
 
-
-<section class="section" id="results">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Results</div><h2>Loved by owners<br>who hate busywork.</h2><p>Real time back every week — measured, not promised.</p></div>
-    <div class="testi-grid">
-      <div class="testi"><div class="stars">★★★★★</div><p>"Leads now hit our CRM in 5 seconds. We stopped losing DMs — saved ~12 hrs/week."</p><b>D2C Founder</b><small>Lead automation • WhatsApp + CRM</small></div>
-      <div class="testi"><div class="stars">★★★★★</div><p>"Support triage went from hours to minutes. AI classifies, n8n routes. 70% faster."</p><b>Agency Owner</b><small>AI classification • Notion + Slack</small></div>
-      <div class="testi"><div class="stars">★★★★★</div><p>"No manual invoices anymore. Orders, stock and emails just sync. Zero entry errors."</p><b>E-commerce Operator</b><small>Shopify • Stripe • Inventory</small></div>
-    </div>
-  </div>
-</section>
-
 <section class="why">
   <div class="container why-grid">
     <div>
@@ -587,18 +480,6 @@ section.hero{border-top:none}
       <div class="metric-row"><div class="metric"><small>Avg. time saved</small><b>22 hrs</b><p>per client / week</p></div><div class="metric"><small>Workflows live</small><b>30+</b><p>since 2024 • across 40+ tools</p></div></div>
       <div class="metric" style="margin-bottom:10px"><small>Uptime (monitored)</small><b style="font-size:22px">99.9% <span style="font-size:11px;font-weight:600;color:var(--fg3)">with retry & alerts</span></b></div>
       <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><span style="font-family:var(--font-d);font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--fg3);border:1px solid var(--h);padding:6px 10px;border-radius:999px">n8n Certified</span><span style="font-family:var(--font-d);font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--fg3);border:1px solid var(--h);padding:6px 10px;border-radius:999px">API • Webhook • AI</span></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section" id="pricing">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Pricing</div><h2>Fixed price.<br>No surprises.</h2><p>Most engagements $500–$3,000. Retainers from $300/mo.</p></div>
-    <div class="pricing-grid">
-      <div class="price-card"><h3>Starter</h3><div class="amt">$500+</div><p style="font-size:12px;color:var(--fg3)">One workflow, live in days</p><ul><li>1 n8n workflow</li><li>2–3 integrations</li><li>Error handling + retries</li><li>14-day support</li></ul><a href="#contact" class="btn-ghost" style="width:100%;justify-content:center;display:inline-flex">Start →</a></div>
-      <div class="price-card featured"><h3>Growth ★</h3><div class="amt">$1,500+</div><p style="font-size:12px;color:var(--fg3)">Most popular for teams</p><ul><li>3–5 workflows</li><li>CRM + sheets + alerts</li><li>AI classify / extract</li><li>Docs + video walkthrough</li><li>30-day support</li></ul><a href="#contact" class="btn-primary" style="width:100%;justify-content:center">Book a Free Call →</a></div>
-      <div class="price-card"><h3>Scale</h3><div class="amt">$3,000+</div><p style="font-size:12px;color:var(--fg3)">Systems + retainer</p><ul><li>Custom + e-commerce flows</li><li>Monitoring + optimization</li><li>Team training</li><li>Retainer from $300/mo</li></ul><a href="#contact" class="btn-ghost" style="width:100%;justify-content:center;display:inline-flex">Talk to us →</a></div>
     </div>
   </div>
 </section>
@@ -626,21 +507,6 @@ section.hero{border-top:none}
   <div class="container about-grid">
     <div><div class="kicker">About Mac Work Flows</div><h2>Automation Built for<br>Real Business Growth.</h2><p>Mac Work Flows helps businesses eliminate repetitive work through practical, custom-built n8n automation. Every workflow is designed around real operational needs — not one-size-fits-all templates.</p><p style="font-size:14px">I'm focused on one outcome: give you time back. If it can be documented, it can be automated — reliably, securely, and with the tools you already pay for.</p><div class="about-points"><div class="point"><i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></i> Business-first design</div><div class="point"><i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></i> Secure & documented</div><div class="point"><i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></i> Vendor-neutral</div><div class="point"><i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></i> Fast iterations</div></div></div>
     <div class="about-card"><h4>The principle</h4><blockquote>"Good automation feels invisible. Your team just notices the work is done — correctly, every time."</blockquote><p>We start with your bottleneck, not a tool list. Then we connect what you already use — CRMs, sheets, email, WhatsApp, Shopify, and custom APIs — into one dependable flow inside n8n.</p><div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">Discovery Call Free</span><span class="tag">2-Week Support</span><span class="tag">Owned by you</span></div></div>
-  </div>
-</section>
-
-
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-head"><div class="kicker">FAQ</div><h2>Questions?<br>Answered.</h2><p>Timeline, access, security, ownership.</p></div>
-    <div class="faq-wrap">
-      <div class="faq"><button>How fast can we go live? <span class="plus">+</span></button><div class="ans">Starter workflows in 3–5 days. Growth systems in 1–2 weeks including testing and docs.</div></div>
-      <div class="faq"><button>Do you need access to our tools? <span class="plus">+</span></button><div class="ans">Yes, limited API / invite access. We use least-privilege keys and document everything.</div></div>
-      <div class="faq"><button>Self-hosted or n8n Cloud? <span class="plus">+</span></button><div class="ans">Either. We recommend Cloud to start, self-host when volume or data rules need it.</div></div>
-      <div class="faq"><button>What if it breaks at 3am? <span class="plus">+</span></button><div class="ans">Retries, error paths and alerts are built-in. 14–30 day support included, retainers after.</div></div>
-      <div class="faq"><button>Who owns the workflows? <span class="plus">+</span></button><div class="ans">You do. Full export, diagram and runbook delivered. No lock-in.</div></div>
-      <div class="faq"><button>How do we start? <span class="plus">+</span></button><div class="ans">Book a free 15-min call. We map one win you can ship this week.</div></div>
-    </div>
   </div>
 </section>
 
@@ -874,34 +740,6 @@ window.addEventListener('load',()=>{
   addEventListener('scroll', skip, {once:true, passive:true});
   setTimeout(skip, 5600);
 });
-
-// ── New: animated counters ──
-(function(){
-  const nums=document.querySelectorAll('.stat-v .num[data-count]');
-  if(!nums.length) return;
-  const io=new IntersectionObserver(es=>{es.forEach(e=>{
-    if(!e.isIntersecting) return;
-    const el=e.target; io.unobserve(el);
-    const target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.decimals||'0'), suf=el.dataset.suffix||'';
-    const dur=1200, t0=performance.now();
-    function tick(t){const p=Math.min(1,(t-t0)/dur), ease=1-Math.pow(1-p,3), v=(target*ease).toFixed(dec); el.textContent=v+suf; if(p<1) requestAnimationFrame(tick);}
-    if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=target.toFixed(dec)+suf;} else requestAnimationFrame(tick);
-  })},{threshold:.4});
-  nums.forEach(n=>io.observe(n));
-})();
-// ── New: FAQ accordion ──
-document.querySelectorAll('.faq button').forEach(btn=>{btn.addEventListener('click',()=>{
-  const item=btn.parentElement, was=item.classList.contains('open');
-  document.querySelectorAll('.faq.open').forEach(f=>f.classList.remove('open'));
-  if(!was) item.classList.add('open');
-});});
-// ── New: stagger cards ──
-(function(){
-  const items=document.querySelectorAll('.cards .card,.steps .step,.testi-grid .testi,.pricing-grid .price-card,.tool-pill,.price-card,.testi');
-  const o2=new IntersectionObserver(es=>{es.forEach((e)=>{if(e.isIntersecting){const i=[...items].indexOf(e.target); e.target.style.transitionDelay=(i%3*80)+'ms'; e.target.classList.add('in'); o2.unobserve(e.target);}})},{threshold:.15});
-  items.forEach(i=>o2.observe(i));
-})();
-
 const sections=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('.nav-links a');
 const io=new IntersectionObserver(ents=>{ents.forEach(en=>{if(en.isIntersecting){const id=en.target.id;navLinks.forEach(a=>a.style.color=a.getAttribute('href')==='#'+id?'var(--fg1)':'')}})},{rootMargin:'-50% 0px -50% 0px'});
 sections.forEach(s=>io.observe(s));
