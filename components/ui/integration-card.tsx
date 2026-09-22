@@ -163,7 +163,25 @@ const ManusLogo = ({ className }: { className?: string }) => {
   );
 };
 
-// Center is 282, 205 — n8n is the hub, everything plugs into it
+const N8nLogo = ({ className }: { className?: string }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
+      <rect width="24" height="24" rx="6" fill="#EA4B71" />
+      <text
+        x="12"
+        y="16.5"
+        textAnchor="middle"
+        fontSize="9"
+        fontWeight="800"
+        fill="#fff"
+      >
+        n8n
+      </text>
+    </svg>
+  );
+};
+
+// Center is 282, 205 — Mac Work Flows is the hub, everything plugs into it
 const integrations: IntegrationItem[] = [
   {
     id: "claude", // Top-Left
@@ -204,6 +222,14 @@ const integrations: IntegrationItem[] = [
     y: 340,
     path: "M 272 217 V 325 Q 272 340 257 340 H 140",
     delay: 0.5,
+  },
+  {
+    id: "n8n", // Bottom-Center
+    icon: N8nLogo,
+    x: 282,
+    y: 340,
+    path: "M 282 217 V 340",
+    delay: 0.55,
   },
   {
     id: "manus", // Bottom-Right
@@ -276,13 +302,16 @@ export function Integration() {
         ))}
       </svg>
 
-      {/* Center Logo — n8n hub */}
-      <div className="absolute top-1/2 left-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-white/25 bg-[#EA4B71] px-3.5 py-2.5 shadow-md sm:rounded-2xl sm:shadow-xl">
-        <span className="text-sm font-extrabold tracking-tight text-white sm:text-base">
-          n8n
+      {/* Center Logo — Mac Work Flows hub */}
+      <div className="absolute top-1/2 left-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-lg border border-white/25 bg-foreground px-3 py-2 text-background shadow-md sm:rounded-2xl sm:px-3.5 sm:py-2.5 sm:shadow-xl">
+        <span className="grid size-6 place-items-center rounded-md bg-background text-xs font-extrabold text-foreground sm:size-7 sm:text-sm">
+          M
+        </span>
+        <span className="text-sm font-extrabold tracking-tight whitespace-nowrap sm:text-base">
+          Mac Work Flows
         </span>
         <motion.div
-          className="absolute inset-0 rounded-lg border-2 border-[#EA4B71]/40 sm:rounded-2xl"
+          className="absolute inset-0 rounded-lg border-2 border-foreground/30 sm:rounded-2xl"
           animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
