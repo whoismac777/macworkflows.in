@@ -138,10 +138,10 @@ const GmailLogo = ({ className }: { className?: string }) => {
 const SlackLogo = ({ className }: { className?: string }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
-      <rect x="6" y="3.5" width="12" height="4.6" rx="2.3" fill="#36C5F0" />
-      <rect x="16.4" y="6" width="4.6" height="12" rx="2.3" fill="#E01E5A" />
-      <rect x="6" y="15.9" width="12" height="4.6" rx="2.3" fill="#ECB22E" />
-      <rect x="3" y="6" width="4.6" height="12" rx="2.3" fill="#2EB67D" />
+      <rect x="6" y="3.5" width="12" height="4.6" rx="2.3" fill="currentColor" />
+      <rect x="16.4" y="6" width="4.6" height="12" rx="2.3" fill="currentColor" />
+      <rect x="6" y="15.9" width="12" height="4.6" rx="2.3" fill="currentColor" />
+      <rect x="3" y="6" width="4.6" height="12" rx="2.3" fill="currentColor" />
     </svg>
   );
 };
@@ -179,10 +179,10 @@ const N8nLogo = ({ className }: { className?: string }) => {
 const SheetsLogo = ({ className }: { className?: string }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
-      <rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="#34A853" />
+      <rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
       <path
         d="M4.5 8.5h15M4.5 13h15M4.5 17.5h15M10 8.5V21M15 8.5V21"
-        stroke="#fff"
+        stroke="currentColor"
         strokeWidth="1.3"
       />
     </svg>
