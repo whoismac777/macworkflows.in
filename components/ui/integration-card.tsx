@@ -181,63 +181,84 @@ const N8nLogo = ({ className }: { className?: string }) => {
   );
 };
 
-// Center is 282, 205 — Mac Work Flows is the hub, everything plugs into it
+const SheetsLogo = ({ className }: { className?: string }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
+      <rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="#34A853" />
+      <path
+        d="M4.5 8.5h15M4.5 13h15M4.5 17.5h15M10 8.5V21M15 8.5V21"
+        stroke="#fff"
+        strokeWidth="1.3"
+      />
+    </svg>
+  );
+};
+
+// Octagon around center 282, 205 — Mac Work Flows is the hub
 const integrations: IntegrationItem[] = [
   {
-    id: "claude", // Top-Left
+    id: "claude", // Left
     icon: ClaudeLogo,
-    x: 110,
-    y: 90,
-    path: "M 270 205 V 105 Q 270 90 255 90 H 110",
+    x: 142,
+    y: 205,
+    path: "M 282 205 L 142 205",
     delay: 0.1,
   },
   {
-    id: "github", // Top-Right
-    icon: GitHubLogo,
-    x: 360,
-    y: 70,
-    path: "M 294 205 V 85 Q 294 70 309 70 H 360",
+    id: "sheets", // Top-Left
+    icon: SheetsLogo,
+    x: 183,
+    y: 106,
+    path: "M 282 205 L 183 106",
     delay: 0.2,
   },
   {
-    id: "whatsapp", // Mid-Left
-    icon: WhatsAppLogo,
-    x: 120,
-    y: 205,
-    path: "M 250 205 H 120",
+    id: "github", // Top
+    icon: GitHubLogo,
+    x: 282,
+    y: 65,
+    path: "M 282 205 L 282 65",
     delay: 0.3,
   },
   {
-    id: "gmail", // Mid-Right
+    id: "gmail", // Top-Right
     icon: GmailLogo,
-    x: 480,
-    y: 205,
-    path: "M 314 205 H 480",
+    x: 381,
+    y: 106,
+    path: "M 282 205 L 381 106",
     delay: 0.4,
   },
   {
-    id: "slack", // Bottom-Left
-    icon: SlackLogo,
-    x: 140,
-    y: 340,
-    path: "M 272 217 V 325 Q 272 340 257 340 H 140",
+    id: "manus", // Right
+    icon: ManusLogo,
+    x: 422,
+    y: 205,
+    path: "M 282 205 L 422 205",
     delay: 0.5,
   },
   {
-    id: "n8n", // Bottom-Center
-    icon: N8nLogo,
-    x: 282,
-    y: 340,
-    path: "M 282 217 V 340",
-    delay: 0.55,
+    id: "slack", // Bottom-Right
+    icon: SlackLogo,
+    x: 381,
+    y: 304,
+    path: "M 282 205 L 381 304",
+    delay: 0.6,
   },
   {
-    id: "manus", // Bottom-Right
-    icon: ManusLogo,
-    x: 440,
-    y: 340,
-    path: "M 292 217 V 325 Q 292 340 307 340 H 440",
-    delay: 0.6,
+    id: "n8n", // Bottom
+    icon: N8nLogo,
+    x: 282,
+    y: 345,
+    path: "M 282 205 L 282 345",
+    delay: 0.7,
+  },
+  {
+    id: "whatsapp", // Bottom-Left
+    icon: WhatsAppLogo,
+    x: 183,
+    y: 304,
+    path: "M 282 205 L 183 304",
+    delay: 0.8,
   },
 ];
 
