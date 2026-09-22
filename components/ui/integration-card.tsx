@@ -201,7 +201,7 @@ const integrations: IntegrationItem[] = [
     icon: ClaudeLogo,
     x: 142,
     y: 205,
-    path: "M 282 205 L 142 205",
+    path: "M 282 205 H 142",
     delay: 0.1,
   },
   {
@@ -209,7 +209,7 @@ const integrations: IntegrationItem[] = [
     icon: SheetsLogo,
     x: 183,
     y: 106,
-    path: "M 282 205 L 183 106",
+    path: "M 270 205 V 121 Q 270 106 255 106 H 183",
     delay: 0.2,
   },
   {
@@ -217,7 +217,7 @@ const integrations: IntegrationItem[] = [
     icon: GitHubLogo,
     x: 282,
     y: 65,
-    path: "M 282 205 L 282 65",
+    path: "M 282 205 V 65",
     delay: 0.3,
   },
   {
@@ -225,7 +225,7 @@ const integrations: IntegrationItem[] = [
     icon: GmailLogo,
     x: 381,
     y: 106,
-    path: "M 282 205 L 381 106",
+    path: "M 294 205 V 121 Q 294 106 309 106 H 381",
     delay: 0.4,
   },
   {
@@ -233,7 +233,7 @@ const integrations: IntegrationItem[] = [
     icon: ManusLogo,
     x: 422,
     y: 205,
-    path: "M 282 205 L 422 205",
+    path: "M 282 205 H 422",
     delay: 0.5,
   },
   {
@@ -241,7 +241,7 @@ const integrations: IntegrationItem[] = [
     icon: SlackLogo,
     x: 381,
     y: 304,
-    path: "M 282 205 L 381 304",
+    path: "M 294 205 V 289 Q 294 304 309 304 H 381",
     delay: 0.6,
   },
   {
@@ -249,7 +249,7 @@ const integrations: IntegrationItem[] = [
     icon: N8nLogo,
     x: 282,
     y: 345,
-    path: "M 282 205 L 282 345",
+    path: "M 282 205 V 345",
     delay: 0.7,
   },
   {
@@ -257,7 +257,7 @@ const integrations: IntegrationItem[] = [
     icon: WhatsAppLogo,
     x: 183,
     y: 304,
-    path: "M 282 205 L 183 304",
+    path: "M 270 205 V 289 Q 270 304 255 304 H 183",
     delay: 0.8,
   },
 ];
