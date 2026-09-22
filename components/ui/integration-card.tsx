@@ -207,11 +207,11 @@ const integrations: IntegrationItem[] = [
     delay: 0.2,
   },
   {
-    id: "github", // Top
+    id: "github", // Bottom
     icon: GitHubLogo,
     x: 282,
-    y: 65,
-    path: "M 282 205 V 65",
+    y: 345,
+    path: "M 282 205 V 345",
     delay: 0.3,
   },
   {
@@ -239,11 +239,11 @@ const integrations: IntegrationItem[] = [
     delay: 0.6,
   },
   {
-    id: "n8n", // Bottom
+    id: "n8n", // Top
     icon: N8nLogo,
     x: 282,
-    y: 345,
-    path: "M 282 205 V 345",
+    y: 65,
+    path: "M 282 205 V 65",
     delay: 0.7,
   },
   {
