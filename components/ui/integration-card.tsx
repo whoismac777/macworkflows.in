@@ -243,7 +243,7 @@ const integrations: IntegrationItem[] = [
     icon: N8nLogo,
     x: 282,
     y: 65,
-    path: "M 282 205 V 65",
+    path: "M 282 65 V 205",
     delay: 0.7,
   },
   {
